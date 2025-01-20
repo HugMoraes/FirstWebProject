@@ -1,4 +1,4 @@
-# First Web Project
+# First Web Project (2021)
 
 This project was made in High School back in 2021 for a precalculus homework, at the time i was interested in programing and i wanted to do something awesome, but i didn't know anything about software development, not even javascript very well. I'm self taught and learned on the go with this project. It was a very good experience for me, the first time with HTML, css and JS.
 
