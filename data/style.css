@@ -1,0 +1,181 @@
+.web_content {
+    height: 100%;
+    display: flex;
+}
+
+.left_bar {
+    flex: 30%;
+    background: #2f3136;
+    height: 100%;
+}
+
+.dash_name {
+    width: 461px; /* Wrong but works .-. */
+    height: 10%;
+    background: #292b2f;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+
+.left_top_content {
+
+    height: 80%;
+    
+    display: flex;
+
+}
+
+.names {
+    flex: 40%;
+    margin-left: 15px;
+}
+
+.names_text {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+
+
+.input_values {
+    flex: 60%;
+    margin-top: 3px;/* Wrong but works .-. */
+}
+
+.value_square {
+    
+    text-align: right;
+    margin-right: 20px;
+    height: 25.6px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    
+
+}
+
+.value_square_p {
+    height: 25.6px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    vertical-align: bottom;
+    
+    
+}
+
+.imp_number {
+
+    vertical-align: top;
+    width: 70px;
+    
+
+}
+
+.imp_slider {
+    
+    vertical-align: bottom;
+    width: 130px; /* Wrong but works .-. */
+}
+
+.left_bar_content {
+    background: rgb(63, 63, 63);
+    
+   text-align: center;
+    
+    
+    
+    
+}
+
+.referencia {
+    
+   color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+    
+    text-decoration: none;
+    text-decoration-color: white;
+
+}
+
+.left_slider {
+    width: 70%;
+
+}
+
+
+
+
+/* right side bellow */
+
+.right_bar {
+    flex: 70%;
+    margin-right: 0;
+    background: #36393f;
+    height: 100%;
+}
+
+.top_right_bar {
+    display: flex;
+    height: 50%;
+}
+
+.pie_chart {
+    
+    flex: 60%;
+    width: 60%;
+    height: 95.4%;
+    
+    
+}
+
+.result {
+
+    flex: 40%;
+    height: 100%;
+    margin-top: 0;
+    display: flex;
+    background: #2f3136;
+    
+
+}
+
+.left_result {
+    flex:20%;
+    margin-left: 10px;
+    
+
+}
+
+.right_result {
+    flex: 80%;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.tabela {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: xx-large;
+    margin-top: 20px;
+}
+
+.bottom_right_bar {
+    
+    height: 50%;
+}
+
+html, body {
+    height: 100%;
+    margin: 0 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    
+}

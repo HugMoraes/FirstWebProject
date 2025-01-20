@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="icon" href="data/icon.ico">
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0-rc/dist/chartjs-plugin-datalabels.min.js" integrity="sha256-xnHIGzvvjYxzGnqAsH3nWhaoONgNZ5oifAsNMi48pYA=" crossorigin="anonymous"></script>
+        
+
+        <link rel="stylesheet" href="data/style.css" />
+        <title>CELPE Graph</title>
+    </head>
+    <body ondragstart="return false;" ondrop="return false;">
+        <div class="web_content">
+            <div class="left_bar">
+                <div class="dash_name"><h1 style="width: auto;"> CELPE Graph beta 1.0 </h1></div>
+                <div class="left_top_content">
+                    <div class="names">
+                        <p class="names_text"> Consumo (kWh): </p>
+                        <p class="names_text"> PIS (%): </p>
+                        <p class="names_text"> COFINS (%): </p>
+                        <p class="names_text"> ICMS (%): </p>
+                        <p class="names_text"> TUSD (R$/kWh): </p>
+                        <p class="names_text"> TE (R$/kWh): </p>
+                        <p class="names_text" style="margin-bottom: 3px;"> BT (R$/kWh): </p>
+
+                        <input type="radio" id="ban_verde" name="bandeiras" checked>
+                        <label for="ban_verde"> Bandeira Verde </label><br>
+
+                        <input type="radio" id="ban_amarela" name="bandeiras">
+                        <label for="ban_amarela"> Bandeira Amarela </label><br>
+
+                        <input type="radio" id="ban_vermelha_1" name="bandeiras">
+                        <label for="ban_vermelha_1"> Bandeira Vermelha 1 </label><br>
+
+                        <input type="radio" id="ban_vermelha_2" name="bandeiras">
+                        <label for="ban_vermelha_2"> Bandeira Vermelha 2 </label><br>
+
+                    </div>
+                    <div class="input_values">
+                        <div class="value_square">
+                            
+                            <input type="number" min="0" max="2000" value="153" class="imp_number" id="consumo_number">
+                            <input type="range" min="0" max="2000" value="153" class="imp_slider" id="consumo_slider">
+                            
+                        </div>
+                        <div class="value_square">
+
+                            <input type="number" min="0" max="10" value="0.93" step="0.01" class="imp_number" id="pis_number">
+                            <input type="range" min="0" max="10" value="0.93" step="0.01" class="imp_slider" id="pis_slider">
+                            
+                            
+
+                        </div>
+                        <div class="value_square">
+
+                            
+                            <input type="number" min="0" max="10" value="4.29" step="0.01" class="imp_number" id="cofins_number">
+                            <input type="range" min="0" max="10" value="4.29" step="0.01" class="imp_slider" id="cofins_slider">
+                            
+
+                        </div>
+                        <div class="value_square">
+
+                            <input type="number" min="0" max="50" value="25" step="0.01" class="imp_number" id="icms_number">
+                            <input type="range" min="0" max="50" value="25" step="0.01" class="imp_slider" id="icms_slider">
+                            
+
+                        </div>
+                        <div class="value_square">
+
+                            <input type="number" min="0" max="1" value="0.34515" step="0.00001" class="imp_number" id="tusd_number">
+                            <input type="range" min="0" max="1" value="0.34515" step="0.00001" class="imp_slider" id="tusd_slider">
+                            
+                            
+
+                        </div>
+                        <div class="value_square">
+                            
+                            <input type="number" min="0" max="1" value="0.27433" step="0.00001" class="imp_number" id="te_number">
+                            <input type="range" min="0" max="1" value="0.27433" step="0.00001" class="imp_slider" id="te_slider">
+
+                        </div>
+
+                        <div class="value_square">
+                            
+                            <input type="number" min="0" max="0.09492" value="0" step="0.00001" class="imp_number" id="ban_number">
+                            <input type="range" min="0" max="0.09492" value="0" step="0.00001" class="imp_slider" id="ban_slider">
+                            
+
+                            
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="left_bar_content">
+                    <a href="Formula da conta de energia.pdf" target="_blank" class="referencia"> > Referências < </a>
+
+                </div>
+            </div>
+            <div class="right_bar">
+                <div class="top_right_bar">
+
+                    <div class="pie_chart">
+                        <canvas id="myChart" style="width:100%;max-width:600px;height:100%;min-height: 100%;"></canvas>
+                        <script src=data/bar_chart.js></script>
+                    </div>
+                    <div class="result">
+                        <div class="left_result">
+                            <p class="tabela"> TUSD: </p>
+                            <p class="tabela"> TE: </p>
+                            <p class="tabela"> BT: </p>
+                            <p class="tabela"> CIP: </p>
+                            <p class="tabela" style="font-weight: bold;"> Total: </p>
+                        </div>
+                        <div class="right_result">
+                            <p class="tabela"><span id="TUSD_i"> R$ 75.67 </span> </p>
+                            <p class="tabela"><span id="TE_i"> R$ 60.14 </span> </p>
+                            <p class="tabela"><span id="BT"> R$ 0 </span> </p>
+                            <p class="tabela"><span id="CIP"> R$ 26.99 </span> </p>
+                            <p class="tabela" style="font-weight: bold;"><span id="total_value"> R$ 162.81 </span> </p>
+                                
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_right_bar">
+                    <canvas id="myChart_2" style="width:97%;max-width:97%;max-height: 100%;"></canvas>
+                    <script src=data/entire_chart.js></script>
+                
+                </div>
+            </div>
+        </div>
+        <script src="data/imp_num.js"></script>
+
+
+    </body>
+</html>
